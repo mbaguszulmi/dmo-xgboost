@@ -3,7 +3,7 @@
 Multi-step stock closing price prediction (240 trading days ahead, ~1 trading
 year) using `MultiOutputRegressor(XGBRegressor)` — one direct model per
 forecast horizon, one bundle per stock. Includes backtest simulation and chart
-generation. See `PLAN.md` for the original design.
+generation.
 
 ## Setup
 
@@ -33,7 +33,7 @@ Interactive menu:
    - **Forecast** — 240-step projection from the latest close, charted against
      the last 5 months of history in `plots/forecast/`.
 
-## Design notes (deviations from PLAN.md, and why)
+## Design notes
 
 - **Targets are returns, not raw prices.** Tree models cannot extrapolate
   beyond the target range seen in training, so raw-price targets flatline on
